@@ -12,6 +12,10 @@ layout: default
       <p>{{site.about-author}}</p>
     </div>
   </header> <!-- End Header -->
+  <div class="sidebar-tabs">
+    <a href="{{ '/about/' | relative_url }}">👤 About Me</a>
+    <a href="{{ '/publications/' | relative_url }}">📄 My Papers</a>
+  </div>
   <footer>
     <section class="contact">
       <h3 class="contact-title">Contact me</h3>
@@ -22,7 +26,7 @@ layout: default
         {% if site.social-bluesky %}
           <li>
             <a href="https://bsky.app/profile/{{ site.social-bluesky }}" target="_blank">
-              <img src="assets/img/bluesky_media_kit_logo_transparent_3.png" alt="Bluesky" style="height: 1.5em; vertical-align: bottom;">
+              <img src="{{site.baseurl}}/assets/img/bluesky_media_kit_logo_transparent_3.png" alt="Bluesky" style="height: 1.5em; vertical-align: bottom;">
             </a>
           </li>        {% endif %}
         {% if site.social-facebook %}
