@@ -936,6 +936,78 @@ table tfoot td {
   background-color: #ffffff;
 }
 
+/* Desktop Sidebar */
+.sidebar-tabs {
+  top: 40%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 1000;
+}
+
+.sidebar-tabs a {
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 0 8px 8px 0;
+  font-weight: bold;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+}
+
+.sidebar-tabs a:hover {
+  background-color: #555;
+}
+
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  z-index: 1001;
+}
+
+/* Mobile Menu Dropdown */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 60px;
+  right: 15px;
+  background-color: #333;
+  border-radius: 6px;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  display: block;
+}
+
+/* Show/Hide Logic for Mobile */
+@media (max-width: 768px) {
+  .sidebar-tabs {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+}
 .about {
   margin: 0 0 40px;
   text-align: center;

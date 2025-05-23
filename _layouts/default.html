@@ -2,7 +2,16 @@
 <html lang="en">
 {% include head.html %}
 <body>
-
+  <script>
+  function toggleMobileMenu() {
+    var menu = document.getElementById("mobileMenu");
+    if (menu.style.display === "flex") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "flex";
+    }
+  }
+</script>
   <div class="wrapper">
     {{ content }}
   </div>
