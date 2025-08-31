@@ -21,7 +21,7 @@ The `TrajectoryStreamer` class offers a convenient interface for streaming traje
 from westpa.tools.trajectory_streaming import TrajectoryStreamer
 stream = TrajectoryStreamer("gromacs", "template.gro", "gmx_imd mdrun -s seg.tpr -o seg.trr -c seg.gro -e seg.edr -cpo seg.cpt -g seg.log -nt 5 -imdwait -imdport 0")
 # The following function starts the simulation and returns the corresponding MDAnalysis universe
-u = stream.start_sim_and_get_universe(stream_timeout=30)
+u = stream.start_sim_and_get_universe(timeout=30)
 # We can create an atom group from the universe
 ag = u.select_atoms("protein and name CA")
 for ts in u.trajectory:
